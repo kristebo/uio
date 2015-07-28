@@ -1,0 +1,54 @@
+
+#### TIMING CONSTRAINTS
+TIMESPEC "TS_P2FF" = FROM "PADS" TO "FFS"  10 ns;
+TIMESPEC "TS_FF2P" = FROM "FFS" TO "PADS"  10 ns;
+TIMESPEC "TS_P2P"  = FROM "PADS" TO "PADS" 100 ns; 
+
+NET "refclk" TNM_NET = "refclk";
+TIMESPEC "TS_domain_refclk" = PERIOD "refclk_grp" 20 ns HIGH 50%;
+
+NET "CRU_0/mclk_div_local" TNM = "mclk_div_grp";
+TIMESPEC "TS_domain_mclk_div" = PERIOD "mclk_div_grp" 2560 ns HIGH 50%;
+
+TIMESPEC "TS_refclk_2_mclk_div" = FROM "refclk_grp" TO "mclk_div_grp" 40 ns;
+TIMESPEC "TS_mclk_div_2_refclk" = FROM "mclk_div_grp" TO "refclk_grp" 40 ns;
+
+#### PIN CONSTRAINTS
+NET "refclk"	 LOC = T9;
+
+# reset and force motor: push buttons
+NET "arst"		 LOC = L14;
+NET "sync_rst"  LOC = L13;
+NET "force_cw"	 LOC = M14;
+NET "force_ccw" LOC = M13;
+
+# setpoint: slide switches
+NET "sp[0]" LOC = F12;
+NET "sp[1]" LOC = G12;
+NET "sp[2]" LOC = H14;
+NET "sp[3]" LOC = H13;
+NET "sp[4]" LOC = J14;
+NET "sp[5]" LOC = J13;
+NET "sp[6]" LOC = K14;
+
+# 7seg displays
+NET "abcdefgdec_n[0]" LOC = P16;
+NET "abcdefgdec_n[1]" LOC = N16;
+NET "abcdefgdec_n[2]" LOC = F13;
+NET "abcdefgdec_n[3]" LOC = R16;
+NET "abcdefgdec_n[4]" LOC = P15;
+NET "abcdefgdec_n[5]" LOC = N15;
+NET "abcdefgdec_n[6]" LOC = G13;
+NET "abcdefgdec_n[7]" LOC = E14;
+NET "a_n[0]" LOC = D14;
+NET "a_n[1]" LOC = G14;
+NET "a_n[2]" LOC = F14;
+NET "a_n[3]" LOC = E13;
+
+# external: motor/optical encoder
+NET "motor_cw" LOC = E6;
+NET "motor_ccw" LOC = C5;
+NET "a" LOC = D5;
+NET "b" LOC = C6;
+
+

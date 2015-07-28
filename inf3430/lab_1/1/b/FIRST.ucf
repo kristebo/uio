@@ -1,0 +1,19 @@
+
+# PlanAhead Generated physical constraints 
+NET "CLK" LOC = L13;
+NET "COUNT[0]" LOC = K12;
+NET "COUNT[1]" LOC = P14;
+NET "COUNT[2]" LOC = L12;
+NET "COUNT[3]" LOC = N14;
+NET "INP[0]" LOC = F12;
+NET "INP[1]" LOC = G12;
+NET "INP[2]" LOC = H14;
+NET "INP[3]" LOC = H13;
+NET "LOAD" LOC = K13;
+NET "MAX_COUNT" LOC = P11;
+NET "RESET" LOC = L14;
+NET "UP" LOC = K14;
+NET "CLK" CLOCK_DEDICATED_ROUTE;
+#Created by Constraints Editor (xc3s200-ft256-5) - 2013/09/17
+NET "CLK" TNM_NET = CLK;
+TIMESPEC TS_CLK = PERIOD "CLK" 20 ns HIGH 50%;

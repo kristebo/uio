@@ -1,0 +1,727 @@
+
+
+
+                  ##################################################
+                  ##                                              ##
+                  ##         C A L I B R E    S Y S T E M         ##
+                  ##                                              ##
+                  ##             L V S   R E P O R T              ##
+                  ##                                              ##
+                  ##################################################
+
+
+
+REPORT FILE NAME:         oblig8_vippe.lvs.report
+LAYOUT NAME:              /uio/arkimedes/s37/magnuand/privat/INF3400/cadence/tsmc90nmlp/oblig8_vippe.sp ('oblig8_vippe')
+SOURCE NAME:              /uio/arkimedes/s37/magnuand/privat/INF3400/cadence/tsmc90nmlp/oblig8_vippe.src.net ('oblig8_vippe')
+RULE FILE:                /uio/arkimedes/s37/magnuand/privat/INF3400/cadence/tsmc90nmlp/_calibre.lvs_
+CREATION TIME:            Thu May  2 15:12:14 2013
+CURRENT DIRECTORY:        /uio/arkimedes/s37/magnuand/privat/INF3400/cadence/tsmc90nmlp
+USER NAME:                magnuand
+CALIBRE VERSION:          v2006.4_23.26    Thu Dec  7 15:47:43 PST 2006
+
+
+
+                               OVERALL COMPARISON RESULTS
+
+
+
+                  #   #         #####################  
+                   # #          #                   #  
+                    #           #     INCORRECT     #  
+                   # #          #                   #  
+                  #   #         #####################  
+
+
+  Error:    Different numbers of nets.
+  Error:    Different numbers of instances.
+  Error:    Connectivity errors.
+
+
+**************************************************************************************************************
+                                      CELL  SUMMARY
+**************************************************************************************************************
+
+  Result         Layout                        Source
+  -----------    -----------                   --------------
+  INCORRECT      oblig8_vippe                  oblig8_vippe
+
+
+
+**************************************************************************************************************
+                                      LVS PARAMETERS
+**************************************************************************************************************
+
+
+o LVS Setup:
+
+   // LVS COMPONENT TYPE PROPERTY
+   // LVS COMPONENT SUBTYPE PROPERTY
+   // LVS PIN NAME PROPERTY
+   LVS POWER NAME                         "AVDDBG" "AVDDR" "AVDWELL" "VDWELL" "AHVDD" "AHVDDG" "VDD5V" "DHVDD" "TAVD33" "TAVDD33"
+                                          "AVDD" "TAVDD" "AHVDDWELL" "TAVD33PST" "VDD" "TAVDDPST" "DVDD" "AHVDDR" "TAVDD18"
+                                          "TAVDD25" "AVDDG" "AVDDB" "VDDG" "VDDPST" "TACVDD" "AHVDDB" "VD33" "HVDDWELL" "VDDSA"
+   LVS GROUND NAME                        "AHVSSUB" "AVSSUB" "DVSS" "AHVSS" "VS33" "VSSG" "AVSSR" "AGND" "AHVSSR" "DHVSS" "VSSPST"
+                                          "HVSSUB" "AVSSBG" "AHVSSB" "TAVSS" "GND" "AVSSB" "VSSUB" "VSS" "AVSS" "TAVSSPST" "AHVSSG"
+                                          "AVSSG"
+   LVS CELL SUPPLY                        NO
+   LVS RECOGNIZE GATES                    ALL
+   LVS IGNORE PORTS                       NO
+   LVS CHECK PORT NAMES                   YES
+   LVS IGNORE TRIVIAL NAMED PORTS         NO
+   LVS BUILTIN DEVICE PIN SWAP            YES
+   LVS ALL CAPACITOR PINS SWAPPABLE       YES
+   LVS DISCARD PINS BY DEVICE             NO
+   LVS SOFT SUBSTRATE PINS                NO
+   LVS INJECT LOGIC                       NO
+   LVS EXPAND UNBALANCED CELLS            YES
+   LVS EXPAND SEED PROMOTIONS             NO
+   LVS PRESERVE PARAMETERIZED CELLS       NO
+   LVS GLOBALS ARE PORTS                  YES
+   LVS REVERSE WL                         NO
+   LVS SPICE PREFER PINS                  YES
+   LVS SPICE SLASH IS SPACE               YES
+   LVS SPICE ALLOW FLOATING PINS          YES
+   LVS SPICE ALLOW INLINE PARAMETERS     UNSPECIFIED
+   LVS SPICE ALLOW UNQUOTED STRINGS       NO
+   LVS SPICE CONDITIONAL LDD              NO
+   LVS SPICE CULL PRIMITIVE SUBCIRCUITS   NO
+   LVS SPICE IMPLIED MOS AREA             NO
+   // LVS SPICE MULTIPLIER NAME
+   LVS SPICE OVERRIDE GLOBALS             NO
+   LVS SPICE REDEFINE PARAM               NO
+   LVS SPICE REPLICATE DEVICES            NO
+   LVS SPICE STRICT WL                    YES
+   // LVS SPICE OPTION
+   LVS STRICT SUBTYPES                    NO
+   LAYOUT CASE                            NO
+   SOURCE CASE                            NO
+   LVS COMPARE CASE                       NO
+   LVS DOWNCASE DEVICE                    NO
+   LVS REPORT MAXIMUM                     50
+   LVS PROPERTY RESOLUTION MAXIMUM        65536
+   // LVS SIGNATURE MAXIMUM
+   LVS FILTER UNUSED OPTION               AB RC RE RG
+   // LVS REPORT OPTION
+   LVS REPORT UNITS                       YES
+   // LVS NON USER NAME PORT
+   // LVS NON USER NAME NET
+   // LVS NON USER NAME INSTANCE
+
+   // Reduction
+
+   LVS REDUCE SERIES MOS                  NO
+   LVS REDUCE PARALLEL MOS                YES
+   LVS REDUCE SEMI SERIES MOS             NO
+   LVS REDUCE SPLIT GATES                 NO
+   LVS REDUCE PARALLEL BIPOLAR            YES
+   LVS REDUCE SERIES CAPACITORS           YES
+   LVS REDUCE PARALLEL CAPACITORS         YES
+   LVS REDUCE SERIES RESISTORS            YES
+   LVS REDUCE PARALLEL RESISTORS          YES
+   LVS REDUCE PARALLEL DIODES             YES
+
+   LVS REDUCE  rnwsti  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rnwsti  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rnwod  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rnwod  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rppolywo  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rppolywo  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rnpolywo  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rnpolywo  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rppolywo_dis  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rppolywo_dis  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rnpolywo_dis  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rnpolywo_dis  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rpodwo  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rpodwo  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rnodwo  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rnodwo  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rppolyl  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rppolyl  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rnpolyl  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rnpolyl  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rppolyl_dis  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rppolyl_dis  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rnpolyl_dis  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rnpolyl_dis  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rpodl  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rpodl  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rnodl  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rnodl  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rppolys  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rppolys  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rnpolys  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rnpolys  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rppolys_dis  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rppolys_dis  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rnpolys_dis  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rnpolys_dis  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rpods  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rpods  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rnods  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rnods  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rm1  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rm1  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rm2  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rm2  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rm3  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rm3  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rm4  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rm4  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rm5  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rm5  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rm6  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rm6  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rm7  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rm7  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rm8  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rm8  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rm9  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rm9  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rm10  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rm10  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rnwsti_m  PARALLEL [ TOLERANCE lr 0 ]
+   LVS REDUCE  rnwsti_m  SERIES PLUS MINUS [ TOLERANCE wr 0 ]
+   LVS REDUCE  rnwod_m  PARALLEL [ TOLERANCE lr 0 ]
+   LVS REDUCE  rnwod_m  SERIES PLUS MINUS [ TOLERANCE wr 0 ]
+   LVS REDUCE  rpodwo_m  PARALLEL [ TOLERANCE lr 0 ]
+   LVS REDUCE  rpodwo_m  SERIES PLUS MINUS [ TOLERANCE wr 0 ]
+   LVS REDUCE  rnodwo_m  PARALLEL [ TOLERANCE lr 0 ]
+   LVS REDUCE  rnodwo_m  SERIES PLUS MINUS [ TOLERANCE wr 0 ]
+   LVS REDUCE  rpodl_m  PARALLEL [ TOLERANCE lr 0 ]
+   LVS REDUCE  rpodl_m  SERIES PLUS MINUS [ TOLERANCE wr 0 ]
+   LVS REDUCE  rnodl_m  PARALLEL [ TOLERANCE lr 0 ]
+   LVS REDUCE  rnodl_m  SERIES PLUS MINUS [ TOLERANCE wr 0 ]
+   LVS REDUCE  rpods_m  PARALLEL [ TOLERANCE lr 0 ]
+   LVS REDUCE  rpods_m  SERIES PLUS MINUS [ TOLERANCE wr 0 ]
+   LVS REDUCE  rnods_m  PARALLEL [ TOLERANCE lr 0 ]
+   LVS REDUCE  rnods_m  SERIES PLUS MINUS [ TOLERANCE wr 0 ]
+   LVS REDUCE  rppolyl_rf  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rppolyl_rf  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rppolys_rf  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rppolys_rf  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCE  rppolywo_rf  PARALLEL [ TOLERANCE l 0 ]
+   LVS REDUCE  rppolywo_rf  SERIES PLUS MINUS [ TOLERANCE w 0 ]
+   LVS REDUCTION PRIORITY                 PARALLEL
+
+   // Trace Property
+
+   TRACE PROPERTY  mn(nch_dnw)  l l 0
+   TRACE PROPERTY  mn(nch_dnw)  w w 0
+   TRACE PROPERTY  mn(nchpg_sr)  l l 0
+   TRACE PROPERTY  mn(nchpg_sr)  w w 0
+   TRACE PROPERTY  mn(nch_uthvt)  l l 0
+   TRACE PROPERTY  mn(nch_uthvt)  w w 0
+   TRACE PROPERTY  mn(nch_na18)  l l 0
+   TRACE PROPERTY  mn(nch_na18)  w w 0
+   TRACE PROPERTY  mn(nch_hvt)  l l 0
+   TRACE PROPERTY  mn(nch_hvt)  w w 0
+   TRACE PROPERTY  mn(nch_lvt)  l l 0
+   TRACE PROPERTY  mn(nch_lvt)  w w 0
+   TRACE PROPERTY  mn(nch_18)  l l 0
+   TRACE PROPERTY  mn(nch_18)  w w 0
+   TRACE PROPERTY  mn(nch_na)  l l 0
+   TRACE PROPERTY  mn(nch_na)  w w 0
+   TRACE PROPERTY  mn(nchpd_hvtsr)  l l 0
+   TRACE PROPERTY  mn(nchpd_hvtsr)  w w 0
+   TRACE PROPERTY  mn(nch_dnw_w)  l l 0
+   TRACE PROPERTY  mn(nch_dnw_w)  w w 0
+   TRACE PROPERTY  mn(nch_w)  l l 0
+   TRACE PROPERTY  mn(nch_w)  w w 0
+   TRACE PROPERTY  mn(nch_33_dnw)  l l 0
+   TRACE PROPERTY  mn(nch_33_dnw)  w w 0
+   TRACE PROPERTY  mn(nch_na25)  l l 0
+   TRACE PROPERTY  mn(nch_na25)  w w 0
+   TRACE PROPERTY  mn(nchpg_hvtsr)  l l 0
+   TRACE PROPERTY  mn(nchpg_hvtsr)  w w 0
+   TRACE PROPERTY  mn(nch_uvt_dnw)  l l 0
+   TRACE PROPERTY  mn(nch_uvt_dnw)  w w 0
+   TRACE PROPERTY  mn(nch_lvt_dnw)  l l 0
+   TRACE PROPERTY  mn(nch_lvt_dnw)  w w 0
+   TRACE PROPERTY  mn(nch_25_dnw)  l l 0
+   TRACE PROPERTY  mn(nch_25_dnw)  w w 0
+   TRACE PROPERTY  mn(nch_33)  l l 0
+   TRACE PROPERTY  mn(nch_33)  w w 0
+   TRACE PROPERTY  mn(nchpd_sr)  l l 0
+   TRACE PROPERTY  mn(nchpd_sr)  w w 0
+   TRACE PROPERTY  mn(nch_hvt_dnw)  l l 0
+   TRACE PROPERTY  mn(nch_hvt_dnw)  w w 0
+   TRACE PROPERTY  mn(nch_na33)  l l 0
+   TRACE PROPERTY  mn(nch_na33)  w w 0
+   TRACE PROPERTY  mn(nch)  l l 0
+   TRACE PROPERTY  mn(nch)  w w 0
+   TRACE PROPERTY  mn(nch_25)  l l 0
+   TRACE PROPERTY  mn(nch_25)  w w 0
+   TRACE PROPERTY  mn(nch_18_dnw)  l l 0
+   TRACE PROPERTY  mn(nch_18_dnw)  w w 0
+   TRACE PROPERTY  mp(pch_25)  l l 0
+   TRACE PROPERTY  mp(pch_25)  w w 0
+   TRACE PROPERTY  mp(pch_33)  l l 0
+   TRACE PROPERTY  mp(pch_33)  w w 0
+   TRACE PROPERTY  mp(pch_uthvt)  l l 0
+   TRACE PROPERTY  mp(pch_uthvt)  w w 0
+   TRACE PROPERTY  mp(pch_lvt)  l l 0
+   TRACE PROPERTY  mp(pch_lvt)  w w 0
+   TRACE PROPERTY  mp(pch_1tr)  l l 0
+   TRACE PROPERTY  mp(pch_1tr)  w w 0
+   TRACE PROPERTY  mp(pch_hvt)  l l 0
+   TRACE PROPERTY  mp(pch_hvt)  w w 0
+   TRACE PROPERTY  mp(pch)  l l 0
+   TRACE PROPERTY  mp(pch)  w w 0
+   TRACE PROPERTY  mp(pchpu_sr)  l l 0
+   TRACE PROPERTY  mp(pchpu_sr)  w w 0
+   TRACE PROPERTY  mp(pch_18)  l l 0
+   TRACE PROPERTY  mp(pch_18)  w w 0
+   TRACE PROPERTY  mp(pch_w)  l l 0
+   TRACE PROPERTY  mp(pch_w)  w w 0
+   TRACE PROPERTY  mp(pchpu_hvtsr)  l l 0
+   TRACE PROPERTY  mp(pchpu_hvtsr)  w w 0
+   TRACE PROPERTY  q(npn10)  a a 0
+   TRACE PROPERTY  q(pnp10)  a a 0
+   TRACE PROPERTY  q(npn5)  a a 0
+   TRACE PROPERTY  q(pnp2)  a a 0
+   TRACE PROPERTY  q(npn2)  a a 0
+   TRACE PROPERTY  q(pnp5)  a a 0
+   TRACE PROPERTY  d(ndio_25)  a a 0
+   TRACE PROPERTY  d(nwdio_33)  a a 0
+   TRACE PROPERTY  d(ndio_lvt)  a a 0
+   TRACE PROPERTY  d(pdio)  a a 0
+   TRACE PROPERTY  d(ndio_na18)  a a 0
+   TRACE PROPERTY  d(ndio_uthvt)  a a 0
+   TRACE PROPERTY  d(ndio_na33)  a a 0
+   TRACE PROPERTY  d(nwdio_18)  a a 0
+   TRACE PROPERTY  d(pdio_25)  a a 0
+   TRACE PROPERTY  d(ndio)  a a 0
+   TRACE PROPERTY  d(ndio_esd)  a a 0
+   TRACE PROPERTY  d(nwdio_25)  a a 0
+   TRACE PROPERTY  d(pdio_uthvt)  a a 0
+   TRACE PROPERTY  d(ndio_33)  a a 0
+   TRACE PROPERTY  d(ndio_na)  a a 0
+   TRACE PROPERTY  d(nwdio)  a a 0
+   TRACE PROPERTY  d(pdio_w)  a a 0
+   TRACE PROPERTY  d(ndio_hvt)  a a 0
+   TRACE PROPERTY  d(pdio_33)  a a 0
+   TRACE PROPERTY  d(ndio_na25)  a a 0
+   TRACE PROPERTY  d(pdio_lvt)  a a 0
+   TRACE PROPERTY  d(pdio_hvt)  a a 0
+   TRACE PROPERTY  d(pdio_18)  a a 0
+   TRACE PROPERTY  d(ndio_w)  a a 0
+   TRACE PROPERTY  d(ndio_18)  a a 0
+   TRACE PROPERTY  rnods_m  wr wr 0
+   TRACE PROPERTY  rnods_m  lr lr 0
+   TRACE PROPERTY  moscap_rf33_nw  lr lr 0
+   TRACE PROPERTY  moscap_rf33_nw  wr wr 0
+   TRACE PROPERTY  moscap_rf33_nw  br br 0
+   TRACE PROPERTY  rnpolys_dis  w w 0
+   TRACE PROPERTY  rnpolys_dis  l l 0
+   TRACE PROPERTY  moscap_rf_nw  lr lr 0
+   TRACE PROPERTY  moscap_rf_nw  wr wr 0
+   TRACE PROPERTY  moscap_rf_nw  br br 0
+   TRACE PROPERTY  rnods  w w 0
+   TRACE PROPERTY  rnods  l l 0
+   TRACE PROPERTY  rnpolywo_dis  w w 0
+   TRACE PROPERTY  rnpolywo_dis  l l 0
+   TRACE PROPERTY  nmoscap_33  wr wr 0
+   TRACE PROPERTY  nmoscap_33  lr lr 0
+   TRACE PROPERTY  moscap_rf  lr lr 0
+   TRACE PROPERTY  moscap_rf  wr wr 0
+   TRACE PROPERTY  moscap_rf  br br 0
+   TRACE PROPERTY  spiral_sym_ct  lay lay 0
+   TRACE PROPERTY  spiral_sym_ct  w w 0
+   TRACE PROPERTY  spiral_sym_ct  nr nr 0
+   TRACE PROPERTY  spiral_sym_ct  rad rad 0
+   TRACE PROPERTY  nmos_rf33  wr wr 0
+   TRACE PROPERTY  nmos_rf33  lr lr 0
+   TRACE PROPERTY  nmos_rf33  nr nr 0
+   TRACE PROPERTY  rppolyl_dis  w w 0
+   TRACE PROPERTY  rppolyl_dis  l l 0
+   TRACE PROPERTY  crtmom_rf  nv nv 0
+   TRACE PROPERTY  crtmom_rf  nh nh 0
+   TRACE PROPERTY  crtmom_rf  s s 0
+   TRACE PROPERTY  crtmom_rf  w w 0
+   TRACE PROPERTY  crtmom_rf  stm stm 0
+   TRACE PROPERTY  crtmom_rf  spm spm 0
+   TRACE PROPERTY  crtmom  nv nv 0
+   TRACE PROPERTY  crtmom  nh nh 0
+   TRACE PROPERTY  crtmom  s s 0
+   TRACE PROPERTY  crtmom  w w 0
+   TRACE PROPERTY  crtmom  stm stm 0
+   TRACE PROPERTY  crtmom  spm spm 0
+   TRACE PROPERTY  moscap_rf18_nw  lr lr 0
+   TRACE PROPERTY  moscap_rf18_nw  wr wr 0
+   TRACE PROPERTY  moscap_rf18_nw  br br 0
+   TRACE PROPERTY  rpods  w w 0
+   TRACE PROPERTY  rpods  l l 0
+   TRACE PROPERTY  pmos_rf25  wr wr 0
+   TRACE PROPERTY  pmos_rf25  lr lr 0
+   TRACE PROPERTY  pmos_rf25  nr nr 0
+   TRACE PROPERTY  moscap_rf25  lr lr 0
+   TRACE PROPERTY  moscap_rf25  wr wr 0
+   TRACE PROPERTY  moscap_rf25  br br 0
+   TRACE PROPERTY  rnodwo_m  wr wr 0
+   TRACE PROPERTY  rnodwo_m  lr lr 0
+   TRACE PROPERTY  rm8  w w 0
+   TRACE PROPERTY  rm8  l l 0
+   TRACE PROPERTY  xjvar_nw  l l 0
+   TRACE PROPERTY  xjvar_nw  w w 0
+   TRACE PROPERTY  xjvar_nw  nr nr 0
+   TRACE PROPERTY  rpods_m  wr wr 0
+   TRACE PROPERTY  rpods_m  lr lr 0
+   TRACE PROPERTY  rpodwo_m  wr wr 0
+   TRACE PROPERTY  rpodwo_m  lr lr 0
+   TRACE PROPERTY  rnwsti  w w 0
+   TRACE PROPERTY  rnwsti  l l 0
+   TRACE PROPERTY  rm6  w w 0
+   TRACE PROPERTY  rm6  l l 0
+   TRACE PROPERTY  nmos_rf25  wr wr 0
+   TRACE PROPERTY  nmos_rf25  lr lr 0
+   TRACE PROPERTY  nmos_rf25  nr nr 0
+   TRACE PROPERTY  rm5  w w 0
+   TRACE PROPERTY  rm5  l l 0
+   TRACE PROPERTY  rnpolys  w w 0
+   TRACE PROPERTY  rnpolys  l l 0
+   TRACE PROPERTY  nmoscap_25  wr wr 0
+   TRACE PROPERTY  nmoscap_25  lr lr 0
+   TRACE PROPERTY  rnpolyl  w w 0
+   TRACE PROPERTY  rnpolyl  l l 0
+   TRACE PROPERTY  spiral_sym  lay lay 0
+   TRACE PROPERTY  spiral_sym  w w 0
+   TRACE PROPERTY  spiral_sym  nr nr 0
+   TRACE PROPERTY  spiral_sym  rad rad 0
+   TRACE PROPERTY  rpodwo  w w 0
+   TRACE PROPERTY  rpodwo  l l 0
+   TRACE PROPERTY  rnwsti_m  wr wr 0
+   TRACE PROPERTY  rnwsti_m  lr lr 0
+   TRACE PROPERTY  rnodl  w w 0
+   TRACE PROPERTY  rnodl  l l 0
+   TRACE PROPERTY  rnpolywo  w w 0
+   TRACE PROPERTY  rnpolywo  l l 0
+   TRACE PROPERTY  pmos_rf  wr wr 0
+   TRACE PROPERTY  pmos_rf  lr lr 0
+   TRACE PROPERTY  pmos_rf  nr nr 0
+   TRACE PROPERTY  rm7  w w 0
+   TRACE PROPERTY  rm7  l l 0
+   TRACE PROPERTY  spiral_std  lay lay 0
+   TRACE PROPERTY  spiral_std  w w 0
+   TRACE PROPERTY  spiral_std  nr nr 0
+   TRACE PROPERTY  spiral_std  rad rad 0
+   TRACE PROPERTY  nmos_rf18  wr wr 0
+   TRACE PROPERTY  nmos_rf18  lr lr 0
+   TRACE PROPERTY  nmos_rf18  nr nr 0
+   TRACE PROPERTY  rppolywo_rf  w w 0
+   TRACE PROPERTY  rppolywo_rf  l l 0
+   TRACE PROPERTY  nmoscap_18  wr wr 0
+   TRACE PROPERTY  nmoscap_18  lr lr 0
+   TRACE PROPERTY  rppolywo_dis  w w 0
+   TRACE PROPERTY  rppolywo_dis  l l 0
+   TRACE PROPERTY  moscap_rf18  lr lr 0
+   TRACE PROPERTY  moscap_rf18  wr wr 0
+   TRACE PROPERTY  moscap_rf18  br br 0
+   TRACE PROPERTY  rppolyl  w w 0
+   TRACE PROPERTY  rppolyl  l l 0
+   TRACE PROPERTY  rnodwo  w w 0
+   TRACE PROPERTY  rnodwo  l l 0
+   TRACE PROPERTY  rppolywo  w w 0
+   TRACE PROPERTY  rppolywo  l l 0
+   TRACE PROPERTY  mimcap_um_2p0_sin_rf  lt lt 0
+   TRACE PROPERTY  mimcap_um_2p0_sin_rf  wt wt 0
+   TRACE PROPERTY  mimcap_woum_2p0_sin_rf  lt lt 0
+   TRACE PROPERTY  mimcap_woum_2p0_sin_rf  wt wt 0
+   TRACE PROPERTY  mimcap_woum_2p0_sin_rf  lay lay 0
+   TRACE PROPERTY  rnodl_m  wr wr 0
+   TRACE PROPERTY  rnodl_m  lr lr 0
+   TRACE PROPERTY  pmos_rf18  wr wr 0
+   TRACE PROPERTY  pmos_rf18  lr lr 0
+   TRACE PROPERTY  pmos_rf18  nr nr 0
+   TRACE PROPERTY  rpodl  w w 0
+   TRACE PROPERTY  rpodl  l l 0
+   TRACE PROPERTY  rnwod_m  wr wr 0
+   TRACE PROPERTY  rnwod_m  lr lr 0
+   TRACE PROPERTY  rnwod  w w 0
+   TRACE PROPERTY  rnwod  l l 0
+   TRACE PROPERTY  rm10  w w 0
+   TRACE PROPERTY  rm10  l l 0
+   TRACE PROPERTY  rppolys_rf  w w 0
+   TRACE PROPERTY  rppolys_rf  l l 0
+   TRACE PROPERTY  rppolys_dis  w w 0
+   TRACE PROPERTY  rppolys_dis  l l 0
+   TRACE PROPERTY  rm4  w w 0
+   TRACE PROPERTY  rm4  l l 0
+   TRACE PROPERTY  nmos_rf  wr wr 0
+   TRACE PROPERTY  nmos_rf  lr lr 0
+   TRACE PROPERTY  nmos_rf  nr nr 0
+   TRACE PROPERTY  pmos_rf33  wr wr 0
+   TRACE PROPERTY  pmos_rf33  lr lr 0
+   TRACE PROPERTY  pmos_rf33  nr nr 0
+   TRACE PROPERTY  rm9  w w 0
+   TRACE PROPERTY  rm9  l l 0
+   TRACE PROPERTY  moscap_rf33  lr lr 0
+   TRACE PROPERTY  moscap_rf33  wr wr 0
+   TRACE PROPERTY  moscap_rf33  br br 0
+   TRACE PROPERTY  rm2  w w 0
+   TRACE PROPERTY  rm2  l l 0
+   TRACE PROPERTY  rm3  w w 0
+   TRACE PROPERTY  rm3  l l 0
+   TRACE PROPERTY  rppolyl_rf  w w 0
+   TRACE PROPERTY  rppolyl_rf  l l 0
+   TRACE PROPERTY  rppolys  w w 0
+   TRACE PROPERTY  rppolys  l l 0
+   TRACE PROPERTY  rnpolyl_dis  w w 0
+   TRACE PROPERTY  rnpolyl_dis  l l 0
+   TRACE PROPERTY  xjvar  l l 0
+   TRACE PROPERTY  xjvar  w w 0
+   TRACE PROPERTY  xjvar  nr nr 0
+   TRACE PROPERTY  rpodl_m  wr wr 0
+   TRACE PROPERTY  rpodl_m  lr lr 0
+   TRACE PROPERTY  rm1  w w 0
+   TRACE PROPERTY  rm1  l l 0
+   TRACE PROPERTY  mimcap_2p0_sin  lt lt 0
+   TRACE PROPERTY  mimcap_2p0_sin  wt wt 0
+   TRACE PROPERTY  mimcap_2p0_sin_3t  lt lt 0
+   TRACE PROPERTY  mimcap_2p0_sin_3t  wt wt 0
+   TRACE PROPERTY  mimcap_2p0_sin_3t  lay lay 0
+   TRACE PROPERTY  moscap_rf25_nw  lr lr 0
+   TRACE PROPERTY  moscap_rf25_nw  wr wr 0
+   TRACE PROPERTY  moscap_rf25_nw  br br 0
+   TRACE PROPERTY  nmoscap  wr wr 0
+   TRACE PROPERTY  nmoscap  lr lr 0
+
+
+
+                   CELL COMPARISON RESULTS ( TOP LEVEL )
+
+
+
+                  #   #         #####################  
+                   # #          #                   #  
+                    #           #     INCORRECT     #  
+                   # #          #                   #  
+                  #   #         #####################  
+
+
+  Error:    Different numbers of nets (see below).
+  Error:    Different numbers of instances (see below).
+  Error:    Connectivity errors.
+
+LAYOUT CELL NAME:         oblig8_vippe
+SOURCE CELL NAME:         oblig8_vippe
+
+--------------------------------------------------------------------------------------------------------------
+
+INITIAL NUMBERS OF OBJECTS
+--------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:              5         5
+
+ Nets:               9        10    *
+
+ Instances:          5         5         MN (4 pins)
+                     4         4         MP (4 pins)
+                ------    ------
+ Total Inst:         9         9
+
+
+NUMBERS OF OBJECTS AFTER TRANSFORMATION
+---------------------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:              5         5
+
+ Nets:               6        10    *
+
+ Instances:          1         5    *    MN (4 pins)
+                     2         4    *    MP (4 pins)
+                     2         0    *    SDW2 (3 pins)
+                     1         0    *    SUP2 (3 pins)
+                ------    ------
+ Total Inst:         6         9
+
+
+       * = Number of objects in layout different from number in source.
+
+
+
+**************************************************************************************************************
+                                 INCORRECT OBJECTS
+**************************************************************************************************************
+
+
+LEGEND:
+-------
+
+  ne  = Naming Error (same layout name found in source
+        circuit, but object was matched otherwise).
+
+
+**************************************************************************************************************
+                                   INCORRECT NETS
+
+DISC#  LAYOUT NAME                                               SOURCE NAME
+**************************************************************************************************************
+
+  1    Net CLK                                                   CLK
+       --------------------------                                --------------------------
+       
+       (SUP2):input                                              ** missing connection **
+         X4/M0(2.290,-4.630):g
+       
+       
+       (SDW2):input                                              ** missing connection **
+         X9/M0(6.600,-6.660):g
+       
+       
+       (SDW2):input                                              ** missing connection **
+         X10/M0(6.610,-8.400):g
+       
+       
+       (SDW2):input                                              ** missing connection **
+         X7/M0(4.480,-8.370):g
+       
+       
+       (SDW2):output                                             ** missing connection **
+         X8/M0(4.480,-6.620):d
+       
+       
+       X12/M0(6.600,-1.870):g                                    ** missing connection **
+       X11/M0(4.500,-1.860):d                                    ** missing connection **
+       
+       ** missing connection **                                  MM2:g
+       ** missing connection **                                  MM3:g
+       ** missing connection **                                  MM7:g
+       
+
+--------------------------------------------------------------------------------------------------------------
+
+  2    ** missing net **                                         net28
+
+--------------------------------------------------------------------------------------------------------------
+
+  3    ** missing net **                                         net13
+
+--------------------------------------------------------------------------------------------------------------
+
+  4    ** missing net **                                         net20
+
+--------------------------------------------------------------------------------------------------------------
+
+  5    ** missing net **                                         net32
+
+
+**************************************************************************************************************
+                                 INCORRECT INSTANCES
+
+DISC#  LAYOUT NAME                                               SOURCE NAME
+**************************************************************************************************************
+
+  6    (SDW2)                                                    ** missing gate **
+
+       Transistors:
+         X7/M0(4.480,-8.370)  MN(NCH)
+         X8/M0(4.480,-6.620)  MN(NCH)
+
+--------------------------------------------------------------------------------------------------------------
+
+  7    (SDW2)                                                    ** missing gate **
+
+       Transistors:
+         X10/M0(6.610,-8.400)  MN(NCH)
+         X9/M0(6.600,-6.660)  MN(NCH)
+
+--------------------------------------------------------------------------------------------------------------
+
+  8    (SUP2)                                                    ** missing gate **
+
+       Transistors:
+         X5/M0(2.290,-2.310)  MP(PCH)
+         X4/M0(2.290,-4.630)  MP(PCH)
+
+--------------------------------------------------------------------------------------------------------------
+
+  9    ** missing instance **                                    MM7  MP(PCH)
+
+--------------------------------------------------------------------------------------------------------------
+
+ 10    ** missing instance **                                    MM6  MP(PCH)
+
+--------------------------------------------------------------------------------------------------------------
+
+ 11    ** missing instance **                                    MM4  MN(NCH)
+
+--------------------------------------------------------------------------------------------------------------
+
+ 12    ** missing instance **                                    MM3  MN(NCH)
+
+--------------------------------------------------------------------------------------------------------------
+
+ 13    ** missing instance **                                    MM2  MN(NCH)
+
+--------------------------------------------------------------------------------------------------------------
+
+ 14    ** missing instance **                                    MM0  MN(NCH)
+
+
+
+**************************************************************************************************************
+                               INFORMATION AND WARNINGS
+**************************************************************************************************************
+
+
+                  Matched    Matched    Unmatched    Unmatched    Component
+                   Layout     Source       Layout       Source    Type
+                  -------    -------    ---------    ---------    ---------
+   Ports:               5          5            0            0
+
+   Nets:                6          6            0            4
+
+   Instances:           1          1            0            4    MN(NCH)
+                        2          2            0            2    MP(PCH)
+                        0          0            2            0    SDW2
+                        0          0            1            0    SUP2
+                  -------    -------    ---------    ---------
+   Total Inst:          3          3            3            6
+
+
+o Initial Correspondence Points:
+
+   Ports:        VDD GND D CLK Q
+
+
+**************************************************************************************************************
+                             DETAILED INSTANCE CONNECTIONS
+
+       LAYOUT NAME                                               SOURCE NAME
+**************************************************************************************************************
+
+          (This section contains detailed information about connections of
+           matched instances that are involved in net discrepancies).
+
+--------------------------------------------------------------------------------------------------------------
+
+       X11/M0(4.500,-1.860)  MP(PCH)                             MM5  MP(PCH)
+         g: CLK                                                    g: CLK
+         s: VDD                                                    s: VDD
+         b: VDD                                                    b: VDD
+         d: CLK                                                    ** CLK **
+         ** missing net **                                         d: net28
+
+--------------------------------------------------------------------------------------------------------------
+
+       X12/M0(6.600,-1.870)  MP(PCH)                             MM8  MP(PCH)
+         s: VDD                                                    s: VDD
+         d: Q                                                      d: Q
+         b: VDD                                                    b: VDD
+         g: CLK                                                    ** CLK **
+         ** missing net **                                         g: net28
+
+
+**************************************************************************************************************
+                                         SUMMARY
+**************************************************************************************************************
+
+Total CPU Time:      0 sec
+Total Elapsed Time:  0 sec
+

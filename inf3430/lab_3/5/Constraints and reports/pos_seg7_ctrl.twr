@@ -1,0 +1,1177 @@
+--------------------------------------------------------------------------------
+Release 14.2 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml pos_seg7_ctrl.twx pos_seg7_ctrl.ncd -o pos_seg7_ctrl.twr
+pos_seg7_ctrl.pcf -ucf pos_seg7_ctrl.ucf
+
+Design file:              pos_seg7_ctrl.ncd
+Physical constraint file: pos_seg7_ctrl.pcf
+Device,package,speed:     xc3s200,ft256,-5 (PRODUCTION 1.39 2012-07-09)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+WARNING:Timing:3223 - Timing constraint TS_P2P = MAXDELAY FROM TIMEGRP "PADS" 
+   TO TIMEGRP "PADS" 100 ns; ignored during timing analysis.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_P2FF = MAXDELAY FROM TIMEGRP "PADS" TO TIMEGRP "FFS" 10 
+ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 163 paths analyzed, 108 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   7.498ns.
+--------------------------------------------------------------------------------
+
+Paths for end point POS_CTRL_0/PM/count_7 (SLICE_X28Y29.CIN), 13 paths
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.502ns (requirement - data path)
+  Source:               sync_rst (PAD)
+  Destination:          POS_CTRL_0/PM/count_7 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.498ns (Levels of Logic = 6)
+  Destination Clock:    mclk rising at 0.000ns
+
+  Maximum Data Path: sync_rst to POS_CTRL_0/PM/count_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L13.I                Tiopi                 1.686   sync_rst
+                                                       sync_rst
+                                                       POS_CTRL_0/PM/sync_rst_IBUF
+    SLICE_X22Y28.G2      net (fanout=10)       2.288   POS_CTRL_0/PM/sync_rst.IBUF
+    SLICE_X22Y28.Y       Tilo                  0.529   POS_CTRL_0/PM/a_sync_not0001_inv
+                                                       POS_CTRL_0/PM/sync_rst_inv1_INV_0
+    SLICE_X28Y26.G2      net (fanout=8)        0.959   POS_CTRL_0/PM/sync_rst_inv
+    SLICE_X28Y26.COUT    Topcyg                0.954   pos<0>
+                                                       POS_CTRL_0/PM/Mcount_count_lut<1>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<1>
+    SLICE_X28Y27.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<1>
+    SLICE_X28Y27.COUT    Tbyp                  0.104   pos<2>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<2>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.COUT    Tbyp                  0.104   pos<4>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<4>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<5>
+    SLICE_X28Y29.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<5>
+    SLICE_X28Y29.CLK     Tcinck                0.874   pos<6>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<6>
+                                                       POS_CTRL_0/PM/Mcount_count_xor<7>
+                                                       POS_CTRL_0/PM/count_7
+    -------------------------------------------------  ---------------------------
+    Total                                      7.498ns (4.251ns logic, 3.247ns route)
+                                                       (56.7% logic, 43.3% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.604ns (requirement - data path)
+  Source:               sync_rst (PAD)
+  Destination:          POS_CTRL_0/PM/count_7 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.396ns (Levels of Logic = 6)
+  Destination Clock:    mclk rising at 0.000ns
+
+  Maximum Data Path: sync_rst to POS_CTRL_0/PM/count_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L13.I                Tiopi                 1.686   sync_rst
+                                                       sync_rst
+                                                       POS_CTRL_0/PM/sync_rst_IBUF
+    SLICE_X22Y28.G2      net (fanout=10)       2.288   POS_CTRL_0/PM/sync_rst.IBUF
+    SLICE_X22Y28.Y       Tilo                  0.529   POS_CTRL_0/PM/a_sync_not0001_inv
+                                                       POS_CTRL_0/PM/sync_rst_inv1_INV_0
+    SLICE_X28Y26.F2      net (fanout=8)        0.867   POS_CTRL_0/PM/sync_rst_inv
+    SLICE_X28Y26.COUT    Topcyf                0.944   pos<0>
+                                                       POS_CTRL_0/PM/Mcount_count_lut<0>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<0>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<1>
+    SLICE_X28Y27.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<1>
+    SLICE_X28Y27.COUT    Tbyp                  0.104   pos<2>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<2>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.COUT    Tbyp                  0.104   pos<4>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<4>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<5>
+    SLICE_X28Y29.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<5>
+    SLICE_X28Y29.CLK     Tcinck                0.874   pos<6>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<6>
+                                                       POS_CTRL_0/PM/Mcount_count_xor<7>
+                                                       POS_CTRL_0/PM/count_7
+    -------------------------------------------------  ---------------------------
+    Total                                      7.396ns (4.241ns logic, 3.155ns route)
+                                                       (57.3% logic, 42.7% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.606ns (requirement - data path)
+  Source:               sync_rst (PAD)
+  Destination:          POS_CTRL_0/PM/count_7 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.394ns (Levels of Logic = 5)
+  Destination Clock:    mclk rising at 0.000ns
+
+  Maximum Data Path: sync_rst to POS_CTRL_0/PM/count_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L13.I                Tiopi                 1.686   sync_rst
+                                                       sync_rst
+                                                       POS_CTRL_0/PM/sync_rst_IBUF
+    SLICE_X22Y28.G2      net (fanout=10)       2.288   POS_CTRL_0/PM/sync_rst.IBUF
+    SLICE_X22Y28.Y       Tilo                  0.529   POS_CTRL_0/PM/a_sync_not0001_inv
+                                                       POS_CTRL_0/PM/sync_rst_inv1_INV_0
+    SLICE_X28Y27.G2      net (fanout=8)        0.959   POS_CTRL_0/PM/sync_rst_inv
+    SLICE_X28Y27.COUT    Topcyg                0.954   pos<2>
+                                                       POS_CTRL_0/PM/Mcount_count_lut<3>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.COUT    Tbyp                  0.104   pos<4>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<4>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<5>
+    SLICE_X28Y29.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<5>
+    SLICE_X28Y29.CLK     Tcinck                0.874   pos<6>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<6>
+                                                       POS_CTRL_0/PM/Mcount_count_xor<7>
+                                                       POS_CTRL_0/PM/count_7
+    -------------------------------------------------  ---------------------------
+    Total                                      7.394ns (4.147ns logic, 3.247ns route)
+                                                       (56.1% logic, 43.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point POS_CTRL_0/PM/count_6 (SLICE_X28Y29.CIN), 13 paths
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.519ns (requirement - data path)
+  Source:               sync_rst (PAD)
+  Destination:          POS_CTRL_0/PM/count_6 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.481ns (Levels of Logic = 6)
+  Destination Clock:    mclk rising at 0.000ns
+
+  Maximum Data Path: sync_rst to POS_CTRL_0/PM/count_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L13.I                Tiopi                 1.686   sync_rst
+                                                       sync_rst
+                                                       POS_CTRL_0/PM/sync_rst_IBUF
+    SLICE_X22Y28.G2      net (fanout=10)       2.288   POS_CTRL_0/PM/sync_rst.IBUF
+    SLICE_X22Y28.Y       Tilo                  0.529   POS_CTRL_0/PM/a_sync_not0001_inv
+                                                       POS_CTRL_0/PM/sync_rst_inv1_INV_0
+    SLICE_X28Y26.G2      net (fanout=8)        0.959   POS_CTRL_0/PM/sync_rst_inv
+    SLICE_X28Y26.COUT    Topcyg                0.954   pos<0>
+                                                       POS_CTRL_0/PM/Mcount_count_lut<1>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<1>
+    SLICE_X28Y27.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<1>
+    SLICE_X28Y27.COUT    Tbyp                  0.104   pos<2>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<2>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.COUT    Tbyp                  0.104   pos<4>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<4>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<5>
+    SLICE_X28Y29.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<5>
+    SLICE_X28Y29.CLK     Tcinck                0.857   pos<6>
+                                                       POS_CTRL_0/PM/Mcount_count_xor<6>
+                                                       POS_CTRL_0/PM/count_6
+    -------------------------------------------------  ---------------------------
+    Total                                      7.481ns (4.234ns logic, 3.247ns route)
+                                                       (56.6% logic, 43.4% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.621ns (requirement - data path)
+  Source:               sync_rst (PAD)
+  Destination:          POS_CTRL_0/PM/count_6 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.379ns (Levels of Logic = 6)
+  Destination Clock:    mclk rising at 0.000ns
+
+  Maximum Data Path: sync_rst to POS_CTRL_0/PM/count_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L13.I                Tiopi                 1.686   sync_rst
+                                                       sync_rst
+                                                       POS_CTRL_0/PM/sync_rst_IBUF
+    SLICE_X22Y28.G2      net (fanout=10)       2.288   POS_CTRL_0/PM/sync_rst.IBUF
+    SLICE_X22Y28.Y       Tilo                  0.529   POS_CTRL_0/PM/a_sync_not0001_inv
+                                                       POS_CTRL_0/PM/sync_rst_inv1_INV_0
+    SLICE_X28Y26.F2      net (fanout=8)        0.867   POS_CTRL_0/PM/sync_rst_inv
+    SLICE_X28Y26.COUT    Topcyf                0.944   pos<0>
+                                                       POS_CTRL_0/PM/Mcount_count_lut<0>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<0>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<1>
+    SLICE_X28Y27.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<1>
+    SLICE_X28Y27.COUT    Tbyp                  0.104   pos<2>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<2>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.COUT    Tbyp                  0.104   pos<4>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<4>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<5>
+    SLICE_X28Y29.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<5>
+    SLICE_X28Y29.CLK     Tcinck                0.857   pos<6>
+                                                       POS_CTRL_0/PM/Mcount_count_xor<6>
+                                                       POS_CTRL_0/PM/count_6
+    -------------------------------------------------  ---------------------------
+    Total                                      7.379ns (4.224ns logic, 3.155ns route)
+                                                       (57.2% logic, 42.8% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.623ns (requirement - data path)
+  Source:               sync_rst (PAD)
+  Destination:          POS_CTRL_0/PM/count_6 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.377ns (Levels of Logic = 5)
+  Destination Clock:    mclk rising at 0.000ns
+
+  Maximum Data Path: sync_rst to POS_CTRL_0/PM/count_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L13.I                Tiopi                 1.686   sync_rst
+                                                       sync_rst
+                                                       POS_CTRL_0/PM/sync_rst_IBUF
+    SLICE_X22Y28.G2      net (fanout=10)       2.288   POS_CTRL_0/PM/sync_rst.IBUF
+    SLICE_X22Y28.Y       Tilo                  0.529   POS_CTRL_0/PM/a_sync_not0001_inv
+                                                       POS_CTRL_0/PM/sync_rst_inv1_INV_0
+    SLICE_X28Y27.G2      net (fanout=8)        0.959   POS_CTRL_0/PM/sync_rst_inv
+    SLICE_X28Y27.COUT    Topcyg                0.954   pos<2>
+                                                       POS_CTRL_0/PM/Mcount_count_lut<3>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.COUT    Tbyp                  0.104   pos<4>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<4>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<5>
+    SLICE_X28Y29.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<5>
+    SLICE_X28Y29.CLK     Tcinck                0.857   pos<6>
+                                                       POS_CTRL_0/PM/Mcount_count_xor<6>
+                                                       POS_CTRL_0/PM/count_6
+    -------------------------------------------------  ---------------------------
+    Total                                      7.377ns (4.130ns logic, 3.247ns route)
+                                                       (56.0% logic, 44.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point POS_CTRL_0/PM/count_5 (SLICE_X28Y28.CIN), 9 paths
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.606ns (requirement - data path)
+  Source:               sync_rst (PAD)
+  Destination:          POS_CTRL_0/PM/count_5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.394ns (Levels of Logic = 5)
+  Destination Clock:    mclk rising at 0.000ns
+
+  Maximum Data Path: sync_rst to POS_CTRL_0/PM/count_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L13.I                Tiopi                 1.686   sync_rst
+                                                       sync_rst
+                                                       POS_CTRL_0/PM/sync_rst_IBUF
+    SLICE_X22Y28.G2      net (fanout=10)       2.288   POS_CTRL_0/PM/sync_rst.IBUF
+    SLICE_X22Y28.Y       Tilo                  0.529   POS_CTRL_0/PM/a_sync_not0001_inv
+                                                       POS_CTRL_0/PM/sync_rst_inv1_INV_0
+    SLICE_X28Y26.G2      net (fanout=8)        0.959   POS_CTRL_0/PM/sync_rst_inv
+    SLICE_X28Y26.COUT    Topcyg                0.954   pos<0>
+                                                       POS_CTRL_0/PM/Mcount_count_lut<1>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<1>
+    SLICE_X28Y27.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<1>
+    SLICE_X28Y27.COUT    Tbyp                  0.104   pos<2>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<2>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.CLK     Tcinck                0.874   pos<4>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<4>
+                                                       POS_CTRL_0/PM/Mcount_count_xor<5>
+                                                       POS_CTRL_0/PM/count_5
+    -------------------------------------------------  ---------------------------
+    Total                                      7.394ns (4.147ns logic, 3.247ns route)
+                                                       (56.1% logic, 43.9% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.708ns (requirement - data path)
+  Source:               sync_rst (PAD)
+  Destination:          POS_CTRL_0/PM/count_5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.292ns (Levels of Logic = 5)
+  Destination Clock:    mclk rising at 0.000ns
+
+  Maximum Data Path: sync_rst to POS_CTRL_0/PM/count_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L13.I                Tiopi                 1.686   sync_rst
+                                                       sync_rst
+                                                       POS_CTRL_0/PM/sync_rst_IBUF
+    SLICE_X22Y28.G2      net (fanout=10)       2.288   POS_CTRL_0/PM/sync_rst.IBUF
+    SLICE_X22Y28.Y       Tilo                  0.529   POS_CTRL_0/PM/a_sync_not0001_inv
+                                                       POS_CTRL_0/PM/sync_rst_inv1_INV_0
+    SLICE_X28Y26.F2      net (fanout=8)        0.867   POS_CTRL_0/PM/sync_rst_inv
+    SLICE_X28Y26.COUT    Topcyf                0.944   pos<0>
+                                                       POS_CTRL_0/PM/Mcount_count_lut<0>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<0>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<1>
+    SLICE_X28Y27.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<1>
+    SLICE_X28Y27.COUT    Tbyp                  0.104   pos<2>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<2>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.CLK     Tcinck                0.874   pos<4>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<4>
+                                                       POS_CTRL_0/PM/Mcount_count_xor<5>
+                                                       POS_CTRL_0/PM/count_5
+    -------------------------------------------------  ---------------------------
+    Total                                      7.292ns (4.137ns logic, 3.155ns route)
+                                                       (56.7% logic, 43.3% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.710ns (requirement - data path)
+  Source:               sync_rst (PAD)
+  Destination:          POS_CTRL_0/PM/count_5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.290ns (Levels of Logic = 4)
+  Destination Clock:    mclk rising at 0.000ns
+
+  Maximum Data Path: sync_rst to POS_CTRL_0/PM/count_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L13.I                Tiopi                 1.686   sync_rst
+                                                       sync_rst
+                                                       POS_CTRL_0/PM/sync_rst_IBUF
+    SLICE_X22Y28.G2      net (fanout=10)       2.288   POS_CTRL_0/PM/sync_rst.IBUF
+    SLICE_X22Y28.Y       Tilo                  0.529   POS_CTRL_0/PM/a_sync_not0001_inv
+                                                       POS_CTRL_0/PM/sync_rst_inv1_INV_0
+    SLICE_X28Y27.G2      net (fanout=8)        0.959   POS_CTRL_0/PM/sync_rst_inv
+    SLICE_X28Y27.COUT    Topcyg                0.954   pos<2>
+                                                       POS_CTRL_0/PM/Mcount_count_lut<3>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.CIN     net (fanout=1)        0.000   POS_CTRL_0/PM/Mcount_count_cy<3>
+    SLICE_X28Y28.CLK     Tcinck                0.874   pos<4>
+                                                       POS_CTRL_0/PM/Mcount_count_cy<4>
+                                                       POS_CTRL_0/PM/Mcount_count_xor<5>
+                                                       POS_CTRL_0/PM/count_5
+    -------------------------------------------------  ---------------------------
+    Total                                      7.290ns (4.043ns logic, 3.247ns route)
+                                                       (55.5% logic, 44.5% route)
+
+--------------------------------------------------------------------------------
+
+Fastest Paths: TS_P2FF = MAXDELAY FROM TIMEGRP "PADS" TO TIMEGRP "FFS" 10 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point S7C_0/count0_8 (SLICE_X24Y6.CLK), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      2.099ns (data path)
+  Source:               refclk (PAD)
+  Destination:          S7C_0/count0_8 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      2.099ns (Levels of Logic = 2)
+
+  Minimum Data Path: refclk to S7C_0/count0_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    T9.I                 Tiopi                 1.349   refclk
+                                                       refclk
+                                                       refclk_IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   refclk_IBUFG
+    BUFGMUX0.O           Tgi0o                 0.001   CRU_0/bufg_0
+                                                       CRU_0/bufg_0.GCLKMUX
+                                                       CRU_0/bufg_0
+    SLICE_X24Y6.CLK      net (fanout=37)       0.748   mclk
+    -------------------------------------------------  ---------------------------
+    Total                                      2.099ns (1.350ns logic, 0.749ns route)
+                                                       (64.3% logic, 35.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point S7C_0/count0_9 (SLICE_X24Y6.CLK), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      2.099ns (data path)
+  Source:               refclk (PAD)
+  Destination:          S7C_0/count0_9 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      2.099ns (Levels of Logic = 2)
+
+  Minimum Data Path: refclk to S7C_0/count0_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    T9.I                 Tiopi                 1.349   refclk
+                                                       refclk
+                                                       refclk_IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   refclk_IBUFG
+    BUFGMUX0.O           Tgi0o                 0.001   CRU_0/bufg_0
+                                                       CRU_0/bufg_0.GCLKMUX
+                                                       CRU_0/bufg_0
+    SLICE_X24Y6.CLK      net (fanout=37)       0.748   mclk
+    -------------------------------------------------  ---------------------------
+    Total                                      2.099ns (1.350ns logic, 0.749ns route)
+                                                       (64.3% logic, 35.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point S7C_0/count0_10 (SLICE_X24Y7.CLK), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      2.099ns (data path)
+  Source:               refclk (PAD)
+  Destination:          S7C_0/count0_10 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      2.099ns (Levels of Logic = 2)
+
+  Minimum Data Path: refclk to S7C_0/count0_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    T9.I                 Tiopi                 1.349   refclk
+                                                       refclk
+                                                       refclk_IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   refclk_IBUFG
+    BUFGMUX0.O           Tgi0o                 0.001   CRU_0/bufg_0
+                                                       CRU_0/bufg_0.GCLKMUX
+                                                       CRU_0/bufg_0
+    SLICE_X24Y7.CLK      net (fanout=37)       0.748   mclk
+    -------------------------------------------------  ---------------------------
+    Total                                      2.099ns (1.350ns logic, 0.749ns route)
+                                                       (64.3% logic, 35.7% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_FF2P = MAXDELAY FROM TIMEGRP "FFS" TO TIMEGRP "PADS" 10 
+ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 34 paths analyzed, 13 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   7.996ns.
+--------------------------------------------------------------------------------
+
+Paths for end point abcdefgdec_n<3> (R16.PAD), 4 paths
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.004ns (requirement - data path)
+  Source:               S7C_0/disp_3 (FF)
+  Destination:          abcdefgdec_n<3> (PAD)
+  Requirement:          10.000ns
+  Data Path Delay:      7.996ns (Levels of Logic = 2)
+  Source Clock:         mclk rising at 0.000ns
+
+  Maximum Data Path: S7C_0/disp_3 to abcdefgdec_n<3>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y24.XQ      Tcko                  0.626   S7C_0/disp<3>
+                                                       S7C_0/disp_3
+    SLICE_X39Y21.G1      net (fanout=7)        1.773   S7C_0/disp<3>
+    SLICE_X39Y21.Y       Tilo                  0.479   abcdefgdec_n_3_OBUF
+                                                       S7C_0/S7D/abcdefg_dec_3_or00001
+    R16.O1               net (fanout=1)        1.324   abcdefgdec_n_3_OBUF
+    R16.PAD              Tioop                 3.794   abcdefgdec_n<3>
+                                                       abcdefgdec_n_3_OBUF
+                                                       abcdefgdec_n<3>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.996ns (4.899ns logic, 3.097ns route)
+                                                       (61.3% logic, 38.7% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.370ns (requirement - data path)
+  Source:               S7C_0/disp_1 (FF)
+  Destination:          abcdefgdec_n<3> (PAD)
+  Requirement:          10.000ns
+  Data Path Delay:      7.630ns (Levels of Logic = 2)
+  Source Clock:         mclk rising at 0.000ns
+
+  Maximum Data Path: S7C_0/disp_1 to abcdefgdec_n<3>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y24.XQ      Tcko                  0.626   S7C_0/disp<1>
+                                                       S7C_0/disp_1
+    SLICE_X39Y21.G4      net (fanout=7)        1.407   S7C_0/disp<1>
+    SLICE_X39Y21.Y       Tilo                  0.479   abcdefgdec_n_3_OBUF
+                                                       S7C_0/S7D/abcdefg_dec_3_or00001
+    R16.O1               net (fanout=1)        1.324   abcdefgdec_n_3_OBUF
+    R16.PAD              Tioop                 3.794   abcdefgdec_n<3>
+                                                       abcdefgdec_n_3_OBUF
+                                                       abcdefgdec_n<3>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.630ns (4.899ns logic, 2.731ns route)
+                                                       (64.2% logic, 35.8% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.695ns (requirement - data path)
+  Source:               S7C_0/disp_0 (FF)
+  Destination:          abcdefgdec_n<3> (PAD)
+  Requirement:          10.000ns
+  Data Path Delay:      7.305ns (Levels of Logic = 2)
+  Source Clock:         mclk rising at 0.000ns
+
+  Maximum Data Path: S7C_0/disp_0 to abcdefgdec_n<3>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y25.XQ      Tcko                  0.626   S7C_0/disp<0>
+                                                       S7C_0/disp_0
+    SLICE_X39Y21.G3      net (fanout=7)        1.082   S7C_0/disp<0>
+    SLICE_X39Y21.Y       Tilo                  0.479   abcdefgdec_n_3_OBUF
+                                                       S7C_0/S7D/abcdefg_dec_3_or00001
+    R16.O1               net (fanout=1)        1.324   abcdefgdec_n_3_OBUF
+    R16.PAD              Tioop                 3.794   abcdefgdec_n<3>
+                                                       abcdefgdec_n_3_OBUF
+                                                       abcdefgdec_n<3>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.305ns (4.899ns logic, 2.406ns route)
+                                                       (67.1% logic, 32.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point abcdefgdec_n<1> (N16.PAD), 4 paths
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.226ns (requirement - data path)
+  Source:               S7C_0/disp_0 (FF)
+  Destination:          abcdefgdec_n<1> (PAD)
+  Requirement:          10.000ns
+  Data Path Delay:      7.774ns (Levels of Logic = 2)
+  Source Clock:         mclk rising at 0.000ns
+
+  Maximum Data Path: S7C_0/disp_0 to abcdefgdec_n<1>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y25.XQ      Tcko                  0.626   S7C_0/disp<0>
+                                                       S7C_0/disp_0
+    SLICE_X39Y20.F2      net (fanout=7)        1.844   S7C_0/disp<0>
+    SLICE_X39Y20.X       Tilo                  0.479   abcdefgdec_n_1_OBUF
+                                                       S7C_0/S7D/abcdefg_dec_1_or00001
+    N16.O1               net (fanout=1)        1.031   abcdefgdec_n_1_OBUF
+    N16.PAD              Tioop                 3.794   abcdefgdec_n<1>
+                                                       abcdefgdec_n_1_OBUF
+                                                       abcdefgdec_n<1>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.774ns (4.899ns logic, 2.875ns route)
+                                                       (63.0% logic, 37.0% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.685ns (requirement - data path)
+  Source:               S7C_0/disp_1 (FF)
+  Destination:          abcdefgdec_n<1> (PAD)
+  Requirement:          10.000ns
+  Data Path Delay:      7.315ns (Levels of Logic = 2)
+  Source Clock:         mclk rising at 0.000ns
+
+  Maximum Data Path: S7C_0/disp_1 to abcdefgdec_n<1>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y24.XQ      Tcko                  0.626   S7C_0/disp<1>
+                                                       S7C_0/disp_1
+    SLICE_X39Y20.F4      net (fanout=7)        1.385   S7C_0/disp<1>
+    SLICE_X39Y20.X       Tilo                  0.479   abcdefgdec_n_1_OBUF
+                                                       S7C_0/S7D/abcdefg_dec_1_or00001
+    N16.O1               net (fanout=1)        1.031   abcdefgdec_n_1_OBUF
+    N16.PAD              Tioop                 3.794   abcdefgdec_n<1>
+                                                       abcdefgdec_n_1_OBUF
+                                                       abcdefgdec_n<1>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.315ns (4.899ns logic, 2.416ns route)
+                                                       (67.0% logic, 33.0% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.916ns (requirement - data path)
+  Source:               S7C_0/disp_3 (FF)
+  Destination:          abcdefgdec_n<1> (PAD)
+  Requirement:          10.000ns
+  Data Path Delay:      7.084ns (Levels of Logic = 2)
+  Source Clock:         mclk rising at 0.000ns
+
+  Maximum Data Path: S7C_0/disp_3 to abcdefgdec_n<1>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y24.XQ      Tcko                  0.626   S7C_0/disp<3>
+                                                       S7C_0/disp_3
+    SLICE_X39Y20.F3      net (fanout=7)        1.154   S7C_0/disp<3>
+    SLICE_X39Y20.X       Tilo                  0.479   abcdefgdec_n_1_OBUF
+                                                       S7C_0/S7D/abcdefg_dec_1_or00001
+    N16.O1               net (fanout=1)        1.031   abcdefgdec_n_1_OBUF
+    N16.PAD              Tioop                 3.794   abcdefgdec_n<1>
+                                                       abcdefgdec_n_1_OBUF
+                                                       abcdefgdec_n<1>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.084ns (4.899ns logic, 2.185ns route)
+                                                       (69.2% logic, 30.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point abcdefgdec_n<4> (P15.PAD), 4 paths
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.231ns (requirement - data path)
+  Source:               S7C_0/disp_0 (FF)
+  Destination:          abcdefgdec_n<4> (PAD)
+  Requirement:          10.000ns
+  Data Path Delay:      7.769ns (Levels of Logic = 2)
+  Source Clock:         mclk rising at 0.000ns
+
+  Maximum Data Path: S7C_0/disp_0 to abcdefgdec_n<4>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y25.XQ      Tcko                  0.626   S7C_0/disp<0>
+                                                       S7C_0/disp_0
+    SLICE_X39Y22.F2      net (fanout=7)        1.546   S7C_0/disp<0>
+    SLICE_X39Y22.X       Tilo                  0.479   abcdefgdec_n_4_OBUF
+                                                       S7C_0/S7D/abcdefg_dec_4_or00001
+    P15.O1               net (fanout=1)        1.324   abcdefgdec_n_4_OBUF
+    P15.PAD              Tioop                 3.794   abcdefgdec_n<4>
+                                                       abcdefgdec_n_4_OBUF
+                                                       abcdefgdec_n<4>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.769ns (4.899ns logic, 2.870ns route)
+                                                       (63.1% logic, 36.9% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.634ns (requirement - data path)
+  Source:               S7C_0/disp_3 (FF)
+  Destination:          abcdefgdec_n<4> (PAD)
+  Requirement:          10.000ns
+  Data Path Delay:      7.366ns (Levels of Logic = 2)
+  Source Clock:         mclk rising at 0.000ns
+
+  Maximum Data Path: S7C_0/disp_3 to abcdefgdec_n<4>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y24.XQ      Tcko                  0.626   S7C_0/disp<3>
+                                                       S7C_0/disp_3
+    SLICE_X39Y22.F3      net (fanout=7)        1.143   S7C_0/disp<3>
+    SLICE_X39Y22.X       Tilo                  0.479   abcdefgdec_n_4_OBUF
+                                                       S7C_0/S7D/abcdefg_dec_4_or00001
+    P15.O1               net (fanout=1)        1.324   abcdefgdec_n_4_OBUF
+    P15.PAD              Tioop                 3.794   abcdefgdec_n<4>
+                                                       abcdefgdec_n_4_OBUF
+                                                       abcdefgdec_n<4>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.366ns (4.899ns logic, 2.467ns route)
+                                                       (66.5% logic, 33.5% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.690ns (requirement - data path)
+  Source:               S7C_0/disp_1 (FF)
+  Destination:          abcdefgdec_n<4> (PAD)
+  Requirement:          10.000ns
+  Data Path Delay:      7.310ns (Levels of Logic = 2)
+  Source Clock:         mclk rising at 0.000ns
+
+  Maximum Data Path: S7C_0/disp_1 to abcdefgdec_n<4>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y24.XQ      Tcko                  0.626   S7C_0/disp<1>
+                                                       S7C_0/disp_1
+    SLICE_X39Y22.F4      net (fanout=7)        1.087   S7C_0/disp<1>
+    SLICE_X39Y22.X       Tilo                  0.479   abcdefgdec_n_4_OBUF
+                                                       S7C_0/S7D/abcdefg_dec_4_or00001
+    P15.O1               net (fanout=1)        1.324   abcdefgdec_n_4_OBUF
+    P15.PAD              Tioop                 3.794   abcdefgdec_n<4>
+                                                       abcdefgdec_n_4_OBUF
+                                                       abcdefgdec_n<4>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.310ns (4.899ns logic, 2.411ns route)
+                                                       (67.0% logic, 33.0% route)
+
+--------------------------------------------------------------------------------
+
+Fastest Paths: TS_FF2P = MAXDELAY FROM TIMEGRP "FFS" TO TIMEGRP "PADS" 10 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point a_n<1> (G14.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      4.588ns (data path)
+  Source:               S7C_0/a_n_1 (FF)
+  Destination:          a_n<1> (PAD)
+  Requirement:          0.000ns
+  Data Path Delay:      4.588ns (Levels of Logic = 1)
+
+  Minimum Data Path: S7C_0/a_n_1 to a_n<1>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y30.YQ      Tcko                  0.501   S7C_0/a_n<1>.OBUF
+                                                       S7C_0/a_n_1
+    G14.O1               net (fanout=1)        0.548   S7C_0/a_n<1>.OBUF
+    G14.PAD              Tioop                 3.539   a_n<1>
+                                                       S7C_0/a_n_1_OBUF
+                                                       a_n<1>
+    -------------------------------------------------  ---------------------------
+    Total                                      4.588ns (4.040ns logic, 0.548ns route)
+                                                       (88.1% logic, 11.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point a_n<2> (F14.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      4.588ns (data path)
+  Source:               S7C_0/a_n_2 (FF)
+  Destination:          a_n<2> (PAD)
+  Requirement:          0.000ns
+  Data Path Delay:      4.588ns (Levels of Logic = 1)
+
+  Minimum Data Path: S7C_0/a_n_2 to a_n<2>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y34.YQ      Tcko                  0.501   S7C_0/a_n<2>.OBUF
+                                                       S7C_0/a_n_2
+    F14.O1               net (fanout=1)        0.548   S7C_0/a_n<2>.OBUF
+    F14.PAD              Tioop                 3.539   a_n<2>
+                                                       S7C_0/a_n_2_OBUF
+                                                       a_n<2>
+    -------------------------------------------------  ---------------------------
+    Total                                      4.588ns (4.040ns logic, 0.548ns route)
+                                                       (88.1% logic, 11.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point a_n<3> (E13.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (hold path):      4.802ns (data path)
+  Source:               S7C_0/a_n_3 (FF)
+  Destination:          a_n<3> (PAD)
+  Requirement:          0.000ns
+  Data Path Delay:      4.802ns (Levels of Logic = 1)
+
+  Minimum Data Path: S7C_0/a_n_3 to a_n<3>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X37Y35.YQ      Tcko                  0.501   S7C_0/a_n<3>.OBUF
+                                                       S7C_0/a_n_3
+    E13.O1               net (fanout=1)        0.762   S7C_0/a_n<3>.OBUF
+    E13.PAD              Tioop                 3.539   a_n<3>
+                                                       S7C_0/a_n_3_OBUF
+                                                       a_n<3>
+    -------------------------------------------------  ---------------------------
+    Total                                      4.802ns (4.040ns logic, 0.762ns route)
+                                                       (84.1% logic, 15.9% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_P2P = MAXDELAY FROM TIMEGRP "PADS" TO TIMEGRP "PADS" 100 
+ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_domain_mclk_div = PERIOD TIMEGRP "mclk_div_grp" 2560 ns 
+HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 163 paths analyzed, 76 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   8.347ns.
+--------------------------------------------------------------------------------
+
+Paths for end point POS_CTRL_0/PC/err_4 (SLICE_X30Y24.CE), 2 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2551.653ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CRU_0/rstsynch_0/rst_div_s2 (FF)
+  Destination:          POS_CTRL_0/PC/err_4 (FF)
+  Requirement:          2560.000ns
+  Data Path Delay:      8.347ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_div rising at 0.000ns
+  Destination Clock:    mclk_div rising at 2560.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CRU_0/rstsynch_0/rst_div_s2 to POS_CTRL_0/PC/err_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y31.YQ      Tcko                  0.626   CRU_0/rst_div_local
+                                                       CRU_0/rstsynch_0/rst_div_s2
+    BUFGMUX4.I0          net (fanout=1)        2.812   CRU_0/rst_div_local
+    BUFGMUX4.O           Tgi0o                 0.001   CRU_0/bufg_2
+                                                       CRU_0/bufg_2.GCLKMUX
+                                                       CRU_0/bufg_2
+    SLICE_X26Y27.F4      net (fanout=12)       2.038   rst_div
+    SLICE_X26Y27.X       Tilo                  0.529   POS_CTRL_0/PC/err_and0000
+                                                       POS_CTRL_0/PC/err_and00001
+    SLICE_X30Y24.CE      net (fanout=4)        1.817   POS_CTRL_0/PC/err_and0000
+    SLICE_X30Y24.CLK     Tceck                 0.524   POS_CTRL_0/PC/err<4>
+                                                       POS_CTRL_0/PC/err_4
+    -------------------------------------------------  ---------------------------
+    Total                                      8.347ns (1.680ns logic, 6.667ns route)
+                                                       (20.1% logic, 79.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2555.980ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               POS_CTRL_0/PC/present_st_FSM_FFd2 (FF)
+  Destination:          POS_CTRL_0/PC/err_4 (FF)
+  Requirement:          2560.000ns
+  Data Path Delay:      4.020ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_div rising at 0.000ns
+  Destination Clock:    mclk_div rising at 2560.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: POS_CTRL_0/PC/present_st_FSM_FFd2 to POS_CTRL_0/PC/err_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y27.YQ      Tcko                  0.626   POS_CTRL_0/PC/present_st_FSM_FFd2
+                                                       POS_CTRL_0/PC/present_st_FSM_FFd2
+    SLICE_X26Y27.F2      net (fanout=3)        0.524   POS_CTRL_0/PC/present_st_FSM_FFd2
+    SLICE_X26Y27.X       Tilo                  0.529   POS_CTRL_0/PC/err_and0000
+                                                       POS_CTRL_0/PC/err_and00001
+    SLICE_X30Y24.CE      net (fanout=4)        1.817   POS_CTRL_0/PC/err_and0000
+    SLICE_X30Y24.CLK     Tceck                 0.524   POS_CTRL_0/PC/err<4>
+                                                       POS_CTRL_0/PC/err_4
+    -------------------------------------------------  ---------------------------
+    Total                                      4.020ns (1.679ns logic, 2.341ns route)
+                                                       (41.8% logic, 58.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point POS_CTRL_0/PC/err_5 (SLICE_X30Y24.CE), 2 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2551.653ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CRU_0/rstsynch_0/rst_div_s2 (FF)
+  Destination:          POS_CTRL_0/PC/err_5 (FF)
+  Requirement:          2560.000ns
+  Data Path Delay:      8.347ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_div rising at 0.000ns
+  Destination Clock:    mclk_div rising at 2560.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CRU_0/rstsynch_0/rst_div_s2 to POS_CTRL_0/PC/err_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y31.YQ      Tcko                  0.626   CRU_0/rst_div_local
+                                                       CRU_0/rstsynch_0/rst_div_s2
+    BUFGMUX4.I0          net (fanout=1)        2.812   CRU_0/rst_div_local
+    BUFGMUX4.O           Tgi0o                 0.001   CRU_0/bufg_2
+                                                       CRU_0/bufg_2.GCLKMUX
+                                                       CRU_0/bufg_2
+    SLICE_X26Y27.F4      net (fanout=12)       2.038   rst_div
+    SLICE_X26Y27.X       Tilo                  0.529   POS_CTRL_0/PC/err_and0000
+                                                       POS_CTRL_0/PC/err_and00001
+    SLICE_X30Y24.CE      net (fanout=4)        1.817   POS_CTRL_0/PC/err_and0000
+    SLICE_X30Y24.CLK     Tceck                 0.524   POS_CTRL_0/PC/err<4>
+                                                       POS_CTRL_0/PC/err_5
+    -------------------------------------------------  ---------------------------
+    Total                                      8.347ns (1.680ns logic, 6.667ns route)
+                                                       (20.1% logic, 79.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2555.980ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               POS_CTRL_0/PC/present_st_FSM_FFd2 (FF)
+  Destination:          POS_CTRL_0/PC/err_5 (FF)
+  Requirement:          2560.000ns
+  Data Path Delay:      4.020ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_div rising at 0.000ns
+  Destination Clock:    mclk_div rising at 2560.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: POS_CTRL_0/PC/present_st_FSM_FFd2 to POS_CTRL_0/PC/err_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y27.YQ      Tcko                  0.626   POS_CTRL_0/PC/present_st_FSM_FFd2
+                                                       POS_CTRL_0/PC/present_st_FSM_FFd2
+    SLICE_X26Y27.F2      net (fanout=3)        0.524   POS_CTRL_0/PC/present_st_FSM_FFd2
+    SLICE_X26Y27.X       Tilo                  0.529   POS_CTRL_0/PC/err_and0000
+                                                       POS_CTRL_0/PC/err_and00001
+    SLICE_X30Y24.CE      net (fanout=4)        1.817   POS_CTRL_0/PC/err_and0000
+    SLICE_X30Y24.CLK     Tceck                 0.524   POS_CTRL_0/PC/err<4>
+                                                       POS_CTRL_0/PC/err_5
+    -------------------------------------------------  ---------------------------
+    Total                                      4.020ns (1.679ns logic, 2.341ns route)
+                                                       (41.8% logic, 58.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point POS_CTRL_0/PC/err_6 (SLICE_X30Y25.CE), 2 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2551.653ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CRU_0/rstsynch_0/rst_div_s2 (FF)
+  Destination:          POS_CTRL_0/PC/err_6 (FF)
+  Requirement:          2560.000ns
+  Data Path Delay:      8.347ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_div rising at 0.000ns
+  Destination Clock:    mclk_div rising at 2560.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CRU_0/rstsynch_0/rst_div_s2 to POS_CTRL_0/PC/err_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y31.YQ      Tcko                  0.626   CRU_0/rst_div_local
+                                                       CRU_0/rstsynch_0/rst_div_s2
+    BUFGMUX4.I0          net (fanout=1)        2.812   CRU_0/rst_div_local
+    BUFGMUX4.O           Tgi0o                 0.001   CRU_0/bufg_2
+                                                       CRU_0/bufg_2.GCLKMUX
+                                                       CRU_0/bufg_2
+    SLICE_X26Y27.F4      net (fanout=12)       2.038   rst_div
+    SLICE_X26Y27.X       Tilo                  0.529   POS_CTRL_0/PC/err_and0000
+                                                       POS_CTRL_0/PC/err_and00001
+    SLICE_X30Y25.CE      net (fanout=4)        1.817   POS_CTRL_0/PC/err_and0000
+    SLICE_X30Y25.CLK     Tceck                 0.524   POS_CTRL_0/PC/err<6>
+                                                       POS_CTRL_0/PC/err_6
+    -------------------------------------------------  ---------------------------
+    Total                                      8.347ns (1.680ns logic, 6.667ns route)
+                                                       (20.1% logic, 79.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2555.980ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               POS_CTRL_0/PC/present_st_FSM_FFd2 (FF)
+  Destination:          POS_CTRL_0/PC/err_6 (FF)
+  Requirement:          2560.000ns
+  Data Path Delay:      4.020ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_div rising at 0.000ns
+  Destination Clock:    mclk_div rising at 2560.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: POS_CTRL_0/PC/present_st_FSM_FFd2 to POS_CTRL_0/PC/err_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y27.YQ      Tcko                  0.626   POS_CTRL_0/PC/present_st_FSM_FFd2
+                                                       POS_CTRL_0/PC/present_st_FSM_FFd2
+    SLICE_X26Y27.F2      net (fanout=3)        0.524   POS_CTRL_0/PC/present_st_FSM_FFd2
+    SLICE_X26Y27.X       Tilo                  0.529   POS_CTRL_0/PC/err_and0000
+                                                       POS_CTRL_0/PC/err_and00001
+    SLICE_X30Y25.CE      net (fanout=4)        1.817   POS_CTRL_0/PC/err_and0000
+    SLICE_X30Y25.CLK     Tceck                 0.524   POS_CTRL_0/PC/err<6>
+                                                       POS_CTRL_0/PC/err_6
+    -------------------------------------------------  ---------------------------
+    Total                                      4.020ns (1.679ns logic, 2.341ns route)
+                                                       (41.8% logic, 58.2% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_domain_mclk_div = PERIOD TIMEGRP "mclk_div_grp" 2560 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point POS_CTRL_0/PC/pos_sync_5 (SLICE_X31Y24.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.251ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               POS_CTRL_0/PM/count_5 (FF)
+  Destination:          POS_CTRL_0/PC/pos_sync_5 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.210ns (Levels of Logic = 0)
+  Clock Path Skew:      0.959ns (3.528 - 2.569)
+  Source Clock:         mclk rising at 2560.000ns
+  Destination Clock:    mclk_div rising at 2560.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: POS_CTRL_0/PM/count_5 to POS_CTRL_0/PC/pos_sync_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y28.YQ      Tcko                  0.501   pos<4>
+                                                       POS_CTRL_0/PM/count_5
+    SLICE_X31Y24.BX      net (fanout=5)        0.955   pos<5>
+    SLICE_X31Y24.CLK     Tckdi       (-Th)     0.246   POS_CTRL_0/PC/pos_sync<5>
+                                                       POS_CTRL_0/PC/pos_sync_5
+    -------------------------------------------------  ---------------------------
+    Total                                      1.210ns (0.255ns logic, 0.955ns route)
+                                                       (21.1% logic, 78.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point POS_CTRL_0/PC/pos_sync_7 (SLICE_X30Y27.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.273ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               POS_CTRL_0/PM/count_7 (FF)
+  Destination:          POS_CTRL_0/PC/pos_sync_7 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.231ns (Levels of Logic = 0)
+  Clock Path Skew:      0.958ns (3.527 - 2.569)
+  Source Clock:         mclk rising at 2560.000ns
+  Destination Clock:    mclk_div rising at 2560.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: POS_CTRL_0/PM/count_7 to POS_CTRL_0/PC/pos_sync_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y29.YQ      Tcko                  0.501   pos<6>
+                                                       POS_CTRL_0/PM/count_7
+    SLICE_X30Y27.BX      net (fanout=6)        0.976   pos<7>
+    SLICE_X30Y27.CLK     Tckdi       (-Th)     0.246   POS_CTRL_0/PC/pos_sync<7>
+                                                       POS_CTRL_0/PC/pos_sync_7
+    -------------------------------------------------  ---------------------------
+    Total                                      1.231ns (0.255ns logic, 0.976ns route)
+                                                       (20.7% logic, 79.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point POS_CTRL_0/PC/pos_sync_2 (SLICE_X32Y22.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.295ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               POS_CTRL_0/PM/count_2 (FF)
+  Destination:          POS_CTRL_0/PC/pos_sync_2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.252ns (Levels of Logic = 0)
+  Clock Path Skew:      0.957ns (3.527 - 2.570)
+  Source Clock:         mclk rising at 2560.000ns
+  Destination Clock:    mclk_div rising at 2560.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: POS_CTRL_0/PM/count_2 to POS_CTRL_0/PC/pos_sync_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y27.XQ      Tcko                  0.501   pos<2>
+                                                       POS_CTRL_0/PM/count_2
+    SLICE_X32Y22.BY      net (fanout=5)        0.956   pos<2>
+    SLICE_X32Y22.CLK     Tckdi       (-Th)     0.205   POS_CTRL_0/PC/pos_sync<3>
+                                                       POS_CTRL_0/PC/pos_sync_2
+    -------------------------------------------------  ---------------------------
+    Total                                      1.252ns (0.296ns logic, 0.956ns route)
+                                                       (23.6% logic, 76.4% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_domain_mclk_div = PERIOD TIMEGRP "mclk_div_grp" 2560 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 2558.498ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 2560.000ns
+  Low pulse: 1280.000ns
+  Low pulse limit: 0.751ns (Trpw)
+  Physical resource: CRU_0/rstsynch_0/rst_div_s1/SR
+  Logical resource: CRU_0/rstsynch_0/rst_div_s1/SR
+  Location pin: SLICE_X29Y24.SR
+  Clock network: arst_IBUF
+--------------------------------------------------------------------------------
+Slack: 2558.498ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 2560.000ns
+  High pulse: 1280.000ns
+  High pulse limit: 0.751ns (Trpw)
+  Physical resource: CRU_0/rstsynch_0/rst_div_s1/SR
+  Logical resource: CRU_0/rstsynch_0/rst_div_s1/SR
+  Location pin: SLICE_X29Y24.SR
+  Clock network: arst_IBUF
+--------------------------------------------------------------------------------
+Slack: 2558.498ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 2560.000ns
+  Low pulse: 1280.000ns
+  Low pulse limit: 0.751ns (Trpw)
+  Physical resource: CRU_0/rst_div_local/SR
+  Logical resource: CRU_0/rstsynch_0/rst_div_s2/SR
+  Location pin: SLICE_X28Y31.SR
+  Clock network: arst_IBUF
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock refclk
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+a           |    1.924(R)|   -0.264(R)|mclk              |   0.000|
+b           |    2.134(R)|   -0.432(R)|mclk              |   0.000|
+sp<0>       |    1.913(R)|   -0.254(R)|mclk              |   0.000|
+sp<1>       |    2.014(R)|   -0.335(R)|mclk              |   0.000|
+sp<2>       |    1.815(R)|   -0.176(R)|mclk              |   0.000|
+sp<3>       |    1.688(R)|   -0.075(R)|mclk              |   0.000|
+sp<4>       |    1.829(R)|   -0.187(R)|mclk              |   0.000|
+sp<5>       |    1.823(R)|   -0.182(R)|mclk              |   0.000|
+sp<6>       |    1.683(R)|   -0.070(R)|mclk              |   0.000|
+sync_rst    |    5.398(R)|   -0.013(R)|mclk              |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock refclk to Pad
+---------------+------------+------------------+--------+
+               | clk (edge) |                  | Clock  |
+Destination    |   to PAD   |Internal Clock(s) | Phase  |
+---------------+------------+------------------+--------+
+a_n<0>         |    8.314(R)|mclk              |   0.000|
+a_n<1>         |    7.674(R)|mclk              |   0.000|
+a_n<2>         |    7.674(R)|mclk              |   0.000|
+a_n<3>         |    7.942(R)|mclk              |   0.000|
+abcdefgdec_n<1>|   10.343(R)|mclk              |   0.000|
+abcdefgdec_n<2>|   10.098(R)|mclk              |   0.000|
+abcdefgdec_n<3>|   10.565(R)|mclk              |   0.000|
+abcdefgdec_n<4>|   10.338(R)|mclk              |   0.000|
+abcdefgdec_n<5>|   10.280(R)|mclk              |   0.000|
+abcdefgdec_n<6>|   10.078(R)|mclk              |   0.000|
+abcdefgdec_n<7>|   10.313(R)|mclk              |   0.000|
+---------------+------------+------------------+--------+
+
+Clock to Setup on destination clock refclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+refclk         |    2.319|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 360 paths, 0 nets, and 219 connections
+
+Design statistics:
+   Minimum period:   8.347ns{1}   (Maximum frequency: 119.804MHz)
+   Maximum path delay from/to any node:   7.996ns
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Oct 25 15:03:44 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 142 MB
+
+
+

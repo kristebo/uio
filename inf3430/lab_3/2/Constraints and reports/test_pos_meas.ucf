@@ -1,0 +1,20 @@
+NET "clk" TNM_NET = clk;
+TIMESPEC TS_clk = PERIOD "clk" 20 ns HIGH 50%;
+
+NET "rst" LOC = L14;
+NET "clk" LOC = T9;
+NET "sync_rst" LOC = L13;
+NET "btn0" LOC = M13;
+NET "btn1" LOC = M14;
+NET "a" LOC = D5;
+NET "b" LOC = C6;
+NET "force_cw" LOC = E6;
+NET "force_ccw" LOC = C5;
+NET "pos[0]" LOC = K12;
+NET "pos[1]" LOC = P14;
+NET "pos[2]" LOC = L12;
+NET "pos[3]" LOC = N14;
+NET "pos[4]" LOC = P13;
+NET "pos[5]" LOC = N12;
+NET "pos[6]" LOC = P12;
+NET "pos[7]" LOC = P11;

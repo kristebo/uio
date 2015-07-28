@@ -1,0 +1,16 @@
+#  Spartan-3 Starter Board2
+Net fpga_0_RS232_RX_pin LOC=t13;
+Net fpga_0_RS232_TX_pin LOC=r13;
+Net fpga_0_LEDs_8Bit_GPIO_IO_O_pin<0> LOC=k12;
+Net fpga_0_LEDs_8Bit_GPIO_IO_O_pin<1> LOC=p14;
+Net fpga_0_LEDs_8Bit_GPIO_IO_O_pin<2> LOC=l12;
+Net fpga_0_LEDs_8Bit_GPIO_IO_O_pin<3> LOC=n14;
+Net fpga_0_LEDs_8Bit_GPIO_IO_O_pin<4> LOC=p13;
+Net fpga_0_LEDs_8Bit_GPIO_IO_O_pin<5> LOC=n12;
+Net fpga_0_LEDs_8Bit_GPIO_IO_O_pin<6> LOC=p12;
+Net fpga_0_LEDs_8Bit_GPIO_IO_O_pin<7> LOC=p11;
+Net fpga_0_clk_1_sys_clk_pin TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 50000 kHz;
+Net fpga_0_clk_1_sys_clk_pin LOC=T9;
+Net fpga_0_rst_1_sys_rst_pin TIG;
+Net fpga_0_rst_1_sys_rst_pin LOC=l14;
